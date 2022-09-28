@@ -19,5 +19,10 @@ module.exports = {
         muses.push(newMuse)
         globalID++;
         res.status(200).send(muses)
-      }
+      },
+      deleteMuse: (req, res) => {
+        let index = muses.findIndex(elem => elem.id === +req.params.id)
+        muses.splice(index, 1)
+        res.status(200).send(muses)
+    },
 }

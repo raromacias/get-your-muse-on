@@ -11,6 +11,7 @@ const getMusesBtn = document.getElementById('getMuses')
 
 const getMuses = () => axios.get(`${baseURL}/getMuses`).then(musesCallback).catch(errCallback)
 const createMuse = body => axios.post(`${baseURL}/createMuse`, body).then(musesCallback).catch(errCallback)
+const deleteMuse = id => axios.delete(`${baseURL}/deleteMuse/${id}`).then(musesCallback).catch(errCallback)
 
 function submitHandler(e) {
     e.preventDefault()
