@@ -1,5 +1,9 @@
 const musesContainer = document.querySelector('#muses-container')
 const form = document.querySelector('form')
+const editItem = document.querySelector('#editItem')
+const editInput = document.getElementById("editInput")
+const editIndex = document.getElementById('editIndex')
+
 
 const baseURL = `http://localhost:4000`
 
@@ -12,6 +16,9 @@ const getMusesBtn = document.getElementById('getMuses')
 const getMuses = () => axios.get(`${baseURL}/getMuses`).then(musesCallback).catch(errCallback)
 const createMuse = body => axios.post(`${baseURL}/createMuse`, body).then(musesCallback).catch(errCallback)
 const deleteMuse = id => axios.delete(`${baseURL}/deleteMuse/${id}`).then(musesCallback).catch(errCallback)
+const updateQuote = (editIndex, newObj) => {
+    // event.preventDefault()
+    axios.put(`${baseURL}/updateQuote/${editIndex.value}`, {newObj}).then(musesCallback).catch(errCallback)}
 
 function submitHandler(e) {
     e.preventDefault()
@@ -22,7 +29,7 @@ function submitHandler(e) {
 
     let bodyObj = {
         name: name.value,
-        quote: [quote.value], 
+        quote: quote.value, 
         imageURL: imageURL.value
     }
 
@@ -36,17 +43,18 @@ function submitHandler(e) {
 function createMuseCard(muses) {
     const museCard = document.createElement('div')
     museCard.classList.add('muse-card')
+    const submitQuote = document.querySelector('#editQuote')
 
     museCard.innerHTML = `<img alt='muse cover image' src = ${muses.imageURL} class="muse-cover-image"/>
     <p class="name">${muses.name}</p>
-    <div class="btns-container">
-    <p class="muse-quote">${muses.quote[0]}</p>
-</div>
-    <button onclick="deleteMuse(${muses.id})">delete</button>
+    <p class="muse-quote">${muses.quote}</p>
+    <button onclick="deleteMuse(${muses.id})">delete muse</button>
     `
 
+    
 
     musesContainer.appendChild(museCard)
+    
 }
 
 function displayMuses(arr) {
@@ -56,5 +64,26 @@ function displayMuses(arr) {
     }
 }
 
+function editQuote(e) {
+    e.preventDefault()
+
+    
+    
+    
+
+    let newObj = {
+        quote: editInput.value, 
+    }
+
+    updateQuote(editIndex, newObj)
+
+    
+    editInput.value = ''
+    editIndex.value = ''
+    
+    }
+
 form.addEventListener('submit', submitHandler)
 getMusesBtn.addEventListener('click', getMuses)
+editItem.addEventListener('submit', editQuote)
+

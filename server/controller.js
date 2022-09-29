@@ -11,10 +11,12 @@ module.exports = {
         let{name, quote, imageURL} = req.body;
 
         let newMuse = {
+
+            id: globalID,
             name, 
             quote,
             imageURL,
-            id: globalID
+            
         }
         muses.push(newMuse)
         globalID++;
@@ -25,4 +27,17 @@ module.exports = {
         muses.splice(index, 1)
         res.status(200).send(muses)
     },
+    updateQuote: (req,res) => {
+        const index = muses.findIndex(el => el.id === +req.params.id)
+        let { newObj} = req.body;
+        console.log(req.body)
+
+        muses[index].quote = newObj.quote
+        
+
+        res.status(200).send(muses)
+
+        
+
+    }
 }

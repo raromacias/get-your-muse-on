@@ -7,11 +7,12 @@ app.use(express.json())
 app.use(cors())
 
 
-const { getMuses, createMuse, deleteMuse } = require('./controller')
+const { getMuses, createMuse, deleteMuse , updateQuote} = require('./controller')
 
 app.get(`/getMuses`, getMuses)
 app.post(`/createMuse`, createMuse)
 app.delete('/deleteMuse/:id', deleteMuse)
+app.put('/updateQuote/:id', updateQuote)
 
 
 
