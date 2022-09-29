@@ -17,7 +17,7 @@ const getMuses = () => axios.get(`${baseURL}/getMuses`).then(musesCallback).catc
 const createMuse = body => axios.post(`${baseURL}/createMuse`, body).then(musesCallback).catch(errCallback)
 const deleteMuse = id => axios.delete(`${baseURL}/deleteMuse/${id}`).then(musesCallback).catch(errCallback)
 const updateQuote = (editIndex, newObj) => {
-    // event.preventDefault()
+   
     axios.put(`${baseURL}/updateQuote/${editIndex.value}`, {newObj}).then(musesCallback).catch(errCallback)}
 
 function submitHandler(e) {
@@ -43,11 +43,12 @@ function submitHandler(e) {
 function createMuseCard(muses) {
     const museCard = document.createElement('div')
     museCard.classList.add('muse-card')
-    const submitQuote = document.querySelector('#editQuote')
+   
 
     museCard.innerHTML = `<img alt='muse cover image' src = ${muses.imageURL} class="muse-cover-image"/>
     <p class="name">${muses.name}</p>
     <p class="muse-quote">${muses.quote}</p>
+    <p class="id"> ID:${muses.id}</p>
     <button onclick="deleteMuse(${muses.id})">delete muse</button>
     `
 
