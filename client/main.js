@@ -5,9 +5,15 @@ const editInput = document.getElementById("editInput")
 const editIndex = document.getElementById('editIndex')
 const setColors = ["#2E4E8C","#BFB74B", "#8C1F28", "#3752A6"]
 const btn = document.getElementById('btn');
-// const hexBtn = document.getElementById('btn');
 const color = document.querySelector('.color')
-// const hex = [0,1,2,3,4,5,6,7,8,9, 'A','B','C','D','E','F']
+const navToggle = document.querySelector('.nav-toggle')
+const links = document.querySelector('.links')
+
+function playLinks(){
+   links.classList.toggle('show-links')
+}
+
+
 
 const baseURL = `http://localhost:4000`
 
@@ -99,18 +105,7 @@ function editQuote(e) {
         return Math.floor(Math.random() * setColors.length)
     }
 
-    // function hexChange (){
-    //     let hexColor = '#'
-    //     for(let i = 0; i < 6; i++){
-    //         hexColor += hex[getRandomNumberHex()]
-    //     }
-    //     color.textContent = hexColor
-    //     document.body.style.backgroundColor = hexColor
-    // }
     
-    // function getRandomNumberHex(){
-    //     return Math.floor(Math.random() * hex.length)
-    // }
 
 
 
@@ -118,5 +113,4 @@ form.addEventListener('submit', submitHandler)
 getMusesBtn.addEventListener('click', getMuses)
 editItem.addEventListener('submit', editQuote)
 btn.addEventListener('click', changeColor)
-// hexBtn.addEventListener('click', hexChange)
-
+navToggle.addEventListener("click", playLinks)
