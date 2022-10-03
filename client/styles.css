@@ -1,0 +1,25 @@
+body {
+    color: #282224;
+    background-color: #BFAD54;
+    
+
+}
+#muses-container{
+   background-color: aliceblue;
+   text-align: center;
+   padding: 0px;
+   margin-left: 0px;
+}
+
+img{
+    width: 500px;
+}
+
+.muse-card {
+    padding: 10px;
+    margin: 0px;
+}
+
+h4{
+    padding: 20px;
+}

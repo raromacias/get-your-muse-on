@@ -3,9 +3,11 @@ const form = document.querySelector('form')
 const editItem = document.querySelector('#editItem')
 const editInput = document.getElementById("editInput")
 const editIndex = document.getElementById('editIndex')
-const colors = ["#2E4E8C","#BFB74B", "#8C1F28", "#3752A6"]
+const setColors = ["#2E4E8C","#BFB74B", "#8C1F28", "#3752A6"]
 const btn = document.getElementById('btn');
+// const hexBtn = document.getElementById('btn');
 const color = document.querySelector('.color')
+// const hex = [0,1,2,3,4,5,6,7,8,9, 'A','B','C','D','E','F']
 
 const baseURL = `http://localhost:4000`
 
@@ -89,13 +91,26 @@ function editQuote(e) {
     function changeColor() {
         const randomNumber = getRandomNumber();
         console.log(randomNumber)
-        document.body.style.backgroundColor = colors[randomNumber]
-        color.textContent = colors[randomNumber]
+        document.body.style.backgroundColor = setColors[randomNumber]
+        color.textContent = setColors[randomNumber]
     }
 
     function getRandomNumber() {
-        return Math.floor(Math.random() * colors.length)
+        return Math.floor(Math.random() * setColors.length)
     }
+
+    // function hexChange (){
+    //     let hexColor = '#'
+    //     for(let i = 0; i < 6; i++){
+    //         hexColor += hex[getRandomNumberHex()]
+    //     }
+    //     color.textContent = hexColor
+    //     document.body.style.backgroundColor = hexColor
+    // }
+    
+    // function getRandomNumberHex(){
+    //     return Math.floor(Math.random() * hex.length)
+    // }
 
 
 
@@ -103,4 +118,5 @@ form.addEventListener('submit', submitHandler)
 getMusesBtn.addEventListener('click', getMuses)
 editItem.addEventListener('submit', editQuote)
 btn.addEventListener('click', changeColor)
+// hexBtn.addEventListener('click', hexChange)
 

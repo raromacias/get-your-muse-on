@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Change Colors || Simple
-
-    </title>
+    <link rel="stylesheet" href="styles.css">
+    <title></title>
 </head>
 <body>
     <nav>
@@ -17,13 +16,49 @@
                 <li><a href="hex.html">hex</a></li>
             </ul>
         </div>
-    </nav>
-    <main>
+    </nav> <button id="getMuses">Get muses</button>
+ <main>
         <div class="container">
-            <h2>background color : <span class="color">#282224</span></h2>
-            <button class="btn btn-hero" id="btn">click me</button>
+            <h2>background color : <span class="newColor">#282224</span></h2>
+            <button id="hexBtn">click me</button>
         </div>
     </main>
-   <script src="hex.js"></script> 
+
+
+
+    <header>
+        <h1>Who's your Muse?</h1>
+    </header>
+    <main>
+    <form>
+        <input 
+            type='text'
+            id="name"
+            placeholder="What's their name?"/>
+        <input 
+            type='text'
+            id="quote"
+            placeholder='Famous quote?'/>
+        <input 
+            type='text'
+            id="img"
+            placeholder='Paste an image URL'/>
+        <button>add muse</button>
+    </form>
+   
+  
+    <section id="muses-container"></section>
+  
+    <p>Edit Quote</p>
+    <form  id="editItem">
+      <input type="text" id="editIndex" placeholder="Enter index to edit"/>
+      <input type='text' id="editInput" placeholder="Insert new quote"/>
+      <button type="submit">Submit</button>
+      </form>
+   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+   <script src="./hex.js"></script>
+   <script src="main.js"></script>
+
+   
 </body>
 </html>
