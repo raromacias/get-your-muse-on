@@ -14,29 +14,23 @@
          <nav class="navbar">
             <div class="nav-header">
                 <button class="hex-nav-toggle">
-                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-bars"></i>Change Color Views
                 </button>
             </div>
            <ul class="hex-links">
-             <li class="nav-item"><a href="./index.html">Home</a></li>
-             <li class="nav-item"><a href="./hex.html">Hex Color</a></li>
+             <li class="nav-item"><a href="./index.html">Fixed</a></li>
+             <li class="nav-item"><a href="./hex.html">MultiColor</a></li>
            </ul>
          </nav>
          </div>
    
- <main>
-        <div class="container">
-            <h2>background color : <span class="newColor">#282224</span></h2>
-            <button id="hexBtn">click me</button>
-        </div>
-    </main>
 
-
-
+        
     <header>
-        <h1>Quotes</h1> <button id="getMuses">Get quotes?</button>
+        <h1>Inspirational Quote Generator</h1> <button id="getMuses">Get quotes</button>
     </header>
     <main>
+    <p>Add a quote</p>
     <form>
         <input 
             type='text'
@@ -50,7 +44,7 @@
             type='text'
             id="img"
             placeholder='Paste an image URL'/>
-        <button>add muse</button>
+        <button>add quote</button>
     </form>
    
   
@@ -62,6 +56,11 @@
       <input type='text' id="editInput" placeholder="Insert new quote"/>
       <button type="submit">Submit</button>
       </form>
+      <div class="container">
+        <h2>background color : <span class="newColor">#282224</span></h2>
+        <button class ="btn-color" id="hexBtn">click me</button>
+    </div>
+    </main>
    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
    <script src="./hex.js"></script>
    <script src="main.js"></script>
