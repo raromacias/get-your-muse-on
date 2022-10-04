@@ -10,6 +10,7 @@ The user has access to an already stored array of quotes which each are accompan
 Two distinct color change buttons are accessed using different pages that each use different methods of getting a color option. One uses a limited array of pre-chosen colors. On the other page you can generate all the colors available with a random color generator.
 
 <h5>Front End</h5>
+<h6>Dependencies</h6>
 <ul>  
 <li>axios</li>
 <li>DOM manipulation</li>
@@ -25,13 +26,13 @@ client
  <li>styles.css</li>
  </ul>
 <h5>Back End</h5>
+<h6>Dependencies</h6>
   <ul>
   <li>Node.js</li>
   <li>Express</li>
   <li>Cors</li>
   </ul>
-<h6>File Structure<h6>
-server
+<h6>Server File Structure<h6>
   <ul>
   <li>controller.js</li>
   <li>dB.json</li>
