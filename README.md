@@ -10,22 +10,29 @@ The user has access to an already stored array of quotes which each are accompan
 Two distinct color change buttons are accessed using different pages that each use different methods of getting a color option. One uses a limited array of pre-chosen colors. On the other page you can generate all the colors available with a random color generator.
 
 <h5>Front End</h5>
-* axios
-* DOM manipulation
-* CSS including animation
+<ul>  
+<li>axios</li>
+<li>DOM manipulation</li>
+<li>CSS including animation</li>
+</ul>
 <h6>File structure</h6>
-* client
-  * hex.html
-  * hex.js
-  * index.html
-  * main.js
-  * styles.css
+client
+ <ul>  
+ <li>hex.html</li>
+ <li>hex.js</li>
+ <li>index.html</li>
+ <li>main.js</li>
+ <li>styles.css</li>
+ </ul>
 <h5>Back End</h5>
-* Node.js
-* Express
-* Cors
+  <ul>
+  <li>Node.js</li>
+  <li>Express</li>
+  <li>Cors</li>
+  </ul>
 <h6>File Structure<h6>
-* server
-  * controller.js
-  * dB.json
-  * index.js
+server
+  <ul>
+  <li>controller.js</li>
+  <li>dB.json</li>
+  <li>index.js</li>
