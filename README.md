@@ -9,3 +9,23 @@ The user has access to an already stored array of quotes which each are accompan
 <h4>Background Color Toggle</h4>
 Two distinct color change buttons are accessed using different pages that each use different methods of getting a color option. One uses a limited array of pre-chosen colors. On the other page you can generate all the colors available with a random color generator.
 
+<h5>Front End</h5>
+*axios
+*DOM manipulation
+*CSS including animation
+<h6>File structure</h6>
+*client
+..*hex.html
+..*hex.js
+..*index.html
+..*main.js
+..*styles.css
+<h5>Back End</h5>
+*Node.js
+*Express
+*Cors
+<h6>File Structure<h6>
+*server
+..*controller.js
+..*dB.json
+..*index.js
