@@ -59,7 +59,7 @@ function createMuseCard(muses) {
     <p class="name">${muses.name}</p>
     <p class="muse-quote">${muses.quote}</p>
     <p class="id"> ID:${muses.id}</p>
-    <button onclick="deleteMuse(${muses.id})">delete muse</button>
+    <button onclick="deleteMuse(${muses.id})">delete quote</button>
     `
 
     
