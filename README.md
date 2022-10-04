@@ -1,11 +1,11 @@
-#Inspirational Quote Generator
+<h1>Inspirational Quote Generator</h1>
 This is a project to help generate quotes as an inspirational pick-me up.
-##Tech
+<h2>Tech</h2>
 This project uses Javascript, Express, Node, Axios, and CSS.
 
-###Features
-####Quote Funcionality
+<h3>Features</h3>
+<h4>Quote Funcionality</h4>
 The user has access to an already stored array of quotes which each are accompanied with an image and a name. The user has the ability to add their own quote as well as edit the quote for any saved entry. There is also the feature to delete any given quote object from the array. 
-####Background Color Toggle
+<h4>Background Color Toggle</h4>
 Two distinct color change buttons are accessed using different pages that each use different methods of getting a color option. One uses a limited array of pre-chosen colors. On the other page you can generate all the colors available with a random color generator.
 
