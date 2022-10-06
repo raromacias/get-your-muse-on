@@ -12,6 +12,23 @@ app.post('/seed', seed)
 
 const { getMuses, createMuse, deleteMuse , updateQuote} = require('./controller')
 
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/index.html'))
+  })
+  app.get('/hex', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/hex.html'))
+  })
+  app.get('/css', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/styles.css'))
+  })
+  app.get('/js', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/main.js'))
+  })
+  app.get('/hexjs', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/hex.js'))
+  })
+
+
 app.get(`/getMuses`, getMuses)
 app.post(`/createMuse`, createMuse)
 app.delete('/deleteMuse/:id', deleteMuse)
