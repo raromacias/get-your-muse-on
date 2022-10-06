@@ -19,7 +19,7 @@ let globalID = 4;
 
 module.exports = {
       getMuses: (req,res) => {
-         // console.log(res.data)
+         console.log(res.data)
        res.status(200).send(muses)
       },
       createMuse: (req,res) => {
