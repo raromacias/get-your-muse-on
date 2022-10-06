@@ -3,10 +3,12 @@ const express = require('express')
 const cors = require('cors')
 const {SERVER_PORT} = process.env
 const app = express()
+const {seed} = require('./seed.js')
 
 app.use(express.json())
 app.use(cors())
 
+app.post('/seed', seed)
 
 const { getMuses, createMuse, deleteMuse , updateQuote} = require('./controller')
 
