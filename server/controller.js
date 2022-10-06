@@ -28,21 +28,25 @@ module.exports = {
            .then(dbRes => res.status(200).send(dbRes[0]))
            .catch(err => console.log(err))
          },
-      createMuse: (req,res) => {
-        let{name, quote, imageURL} = req.body;
+    //   createMuse: (req,res) => {
+    //     let{name, quote, imageURL} = req.body;
 
-        let newMuse = {
+    //     let newMuse = {
 
-            id: globalID,
-            name, 
-            quote,
-            imageURL,
+    //         id: globalID,
+    //         name, 
+    //         quote,
+    //         imageURL,
             
-        }
-        muses.push(newMuse)
-        globalID++;
-        res.status(200).send(muses)
-      },
+    //     }
+    //     muses.push(newMuse)
+    //     globalID++;
+    //     res.status(200).send(muses)
+    //   },
+
+        // createMuse: (req,res) => {
+        //    sequelize.query(``)
+        // },
       deleteMuse: (req, res) => {
         let index = muses.findIndex(elem => elem.id === +req.params.id)
         muses.splice(index, 1)

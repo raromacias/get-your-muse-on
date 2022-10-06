@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
 
 
 app.get(`/getMuses`, getMuses)
-app.post(`/createMuse`, createMuse)
+// app.post(`/createMuse`, createMuse)
 app.delete('/deleteMuse/:id', deleteMuse)
 app.put('/updateQuote/:id', updateQuote)
 
