@@ -23,6 +23,7 @@ const errCallback = err => console.log(err)
 const getMusesBtn = document.getElementById('getMuses')
 
 
+
 const getMuses = () => axios.get(`${baseURL}/getMuses`).then(musesCallback).catch(errCallback)
 const createMuse = body => axios.post(`${baseURL}/createMuse`, body).then(musesCallback).catch(errCallback)
 const deleteMuse = id => axios.delete(`${baseURL}/deleteMuse/${id}`).then(musesCallback).catch(errCallback)
@@ -55,10 +56,10 @@ function createMuseCard(muses) {
     museCard.classList.add('muse-card')
    
 
-    museCard.innerHTML = `<img alt='muse cover image' src = ${muses.imageURL} class="muse-cover-image"/>
+    museCard.innerHTML = `<img alt='muse cover image' src = ${muses.image_url} class="muse-cover-image"/>
     <p class="name">${muses.name}</p>
     <p class="muse-quote">${muses.quote}</p>
-    <p class="id"> ID:${muses.id}</p>
+    <p class="id"> ID:${muses.artist_id}</p>
     <button onclick="deleteMuse(${muses.id})">delete quote</button>
     `
 

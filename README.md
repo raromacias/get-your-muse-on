@@ -31,9 +31,12 @@ client
   <li>Node.js</li>
   <li>Express</li>
   <li>Cors</li>
+  <li>dotenv</li>
+  <li>sequelize</li>
   </ul>
 <h6>Server File Structure<h6>
   <ul>
   <li>controller.js</li>
   <li>dB.json</li>
   <li>index.js</li>
+  <li>seed.js</li>

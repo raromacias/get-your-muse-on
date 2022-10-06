@@ -18,10 +18,16 @@ let globalID = 4;
 
 
 module.exports = {
-      getMuses: (req,res) => {
-         console.log(res.data)
-       res.status(200).send(muses)
-      },
+    //   getMuses: (req,res) => {
+    //      console.log(res.data)
+    //    res.status(200).send(muses)
+    //   },
+
+         getMuses: (req, res) => {
+           sequelize.query(`SELECT a.artist_id, a.name, a.image_url, q.quote FROM artist as a JOIN quotes as q ON a.artist_id = q.artist_id LIMIT 3;`)
+           .then(dbRes => res.status(200).send(dbRes[0]))
+           .catch(err => console.log(err))
+         },
       createMuse: (req,res) => {
         let{name, quote, imageURL} = req.body;
 
