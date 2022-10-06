@@ -13,9 +13,9 @@ function playLinks(){
    links.classList.toggle('show-links')
 }
 
-const baseURL = 'https://capstone-inspirational-quote.herokuapp.com'
+// const baseURL = 'https://capstone-inspirational-quote.herokuapp.com'
 
-// const baseURL = `http://localhost:4000`
+const baseURL = `http://localhost:4000`
 
 const musesCallback = ({ data: muses }) => displayMuses(muses)
 const errCallback = err => console.log(err)
